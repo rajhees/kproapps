@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>Welcome</string>
+		<key>description</key>
+		<string>Thanks for purchasing Exersite, a comprehensive pocket reference for a wide variety of stretches, strength exercises and many more. Press next to briefly read about the many features the Exersite app has to offer.
+</string>
+		<key>image</key>
+		<string>tutorial-image-1.png</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>Exersite includes detailed instructions on how to perform hundreds of exercises, including high quality video, and stills for each main step. Exercises are also categorised by location and type and searchable, so you can always find the right one.</string>
+		<key>title</key>
+		<string>Exercises</string>
+		<key>image</key>
+		<string>tutorial-image-2.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Programs</string>
+		<key>description</key>
+		<string>Exersite includes numerous professionally created programs for exercising different parts of the body. Programs include a time estimate, so you can pick a program that suits your available time.</string>
+		<key>image</key>
+		<string>tutorial-image-3.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Prescription</string>
+		<key>description</key>
+		<string>If you are under care of a physical therapist, then you can receive your program within the app. The app will remind you to  complete exercises, and record your completions as you work through your program. If you wish to use this service, please talk to your therapist.</string>
+		<key>image</key>
+		<string>tutorial-image-4.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Shop</string>
+		<key>description</key>
+		<string>Some included exercises require equipment to complete. All required equipment is available the shop section of the app for your convenience, with competitively-priced shipping around the world.</string>
+		<key>image</key>
+		<string>tutorial-image-5.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Thank You</string>
+		<key>description</key>
+		<string>We hope you enjoy using the app. There are many more features in Exersite that you will encounter while using the app. If you have any questions or feedback, please send it from the ‘Settings’ section.</string>
+		<key>image</key>
+		<string>tutorial-image-6.png</string>
+	</dict>
+</array>
+</plist>

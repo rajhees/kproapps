@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>11</key>
+	<array>
+		<dict>
+			<key>id</key>
+			<string>1</string>
+			<key>period</key>
+			<integer>1800</integer>
+			<key>description</key>
+			<string>Every 30 minutes until 6PM</string>
+			<key>title</key>
+			<string>Reminder to complete program</string>
+			<key>reminderText</key>
+			<string>Office Relief 5 minutes: 30 minute reminder to complete program.</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<string>2</string>
+			<key>period</key>
+			<integer>2400</integer>
+			<key>description</key>
+			<string>Every 40 minutes until 6PM</string>
+			<key>title</key>
+			<string>Reminder to get up and walk around</string>
+			<key>reminderText</key>
+			<string>Office Relief 5 minutes: 40 minute reminder to get up and walk around.</string>
+		</dict>
+	</array>
+	<key>12</key>
+	<array>
+		<dict>
+			<key>id</key>
+			<string>3</string>
+			<key>period</key>
+			<integer>1800</integer>
+			<key>description</key>
+			<string>Every 30 minutes until 6PM</string>
+			<key>title</key>
+			<string>Reminder to complete program</string>
+			<key>reminderText</key>
+			<string>Office Relief 10 minutes: 30 minute reminder to complete program.</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<string>4</string>
+			<key>period</key>
+			<integer>2400</integer>
+			<key>description</key>
+			<string>Every 40 minutes until 6PM</string>
+			<key>title</key>
+			<string>Reminder to get up and walk around</string>
+			<key>reminderText</key>
+			<string>Office Relief 10 minutes: 40 minute reminder to get up and walk around.</string>
+		</dict>
+	</array>
+	<key>13</key>
+	<array>
+		<dict>
+			<key>id</key>
+			<string>5</string>
+			<key>period</key>
+			<integer>1800</integer>
+			<key>description</key>
+			<string>Every 30 minutes until 6PM</string>
+			<key>title</key>
+			<string>Reminder to complete program</string>
+			<key>reminderText</key>
+			<string>Office Relief Lunch Time: 30 minute reminder to complete program.</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<string>6</string>
+			<key>period</key>
+			<integer>2400</integer>
+			<key>description</key>
+			<string>Every 40 minutes until 6PM</string>
+			<key>title</key>
+			<string>Reminder to get up and walk around</string>
+			<key>reminderText</key>
+			<string>Office Relief Lunch Time: 40 minute reminder to get up and walk around.</string>
+		</dict>
+	</array>
+	<key>16</key>
+	<array>
+		<dict>
+			<key>id</key>
+			<string>7</string>
+			<key>period</key>
+			<real>1800</real>
+			<key>description</key>
+			<string>Every 30 minutes until 6PM</string>
+			<key>title</key>
+			<string>Reminder to drink water</string>
+			<key>reminderText</key>
+			<string>Drink Water: 30 minute reminder to drink water.</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<string>8</string>
+			<key>period</key>
+			<integer>3600</integer>
+			<key>description</key>
+			<string>Every hour until 6PM</string>
+			<key>title</key>
+			<string>Reminder to drink water</string>
+			<key>reminderText</key>
+			<string>Drink Water: Hourly reminder to drink water.</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Title</key>
+			<string>Feedback</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>FooterText</key>
+			<string>Your feedback improves this app. Please send bug reports, feature requests or general comments.</string>
+		</dict>
+		<dict>
+			<key>Key</key>
+			<string>sendFeedback</string>
+			<key>Title</key>
+			<string>Send Feedback</string>
+			<key>Type</key>
+			<string>IASKMailComposeSpecifier</string>
+			<key>IASKMailComposeToRecipents</key>
+			<array>
+				<string>info@exersite.com.au</string>
+			</array>
+			<key>IASKMailComposeSubject</key>
+			<string>Exersite iOS Feedback</string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Preferences</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>FooterText</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Key</key>
+			<string>clearAllReminders</string>
+			<key>Title</key>
+			<string>Clear All Program Reminders</string>
+			<key>Type</key>
+			<string>IASKButtonSpecifier</string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Tutorial</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>FooterText</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Show Tutorial Again</string>
+			<key>Key</key>
+			<string>showTutorial</string>
+			<key>Type</key>
+			<string>IASKButtonSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright Osteomovements 2013, Design and development by James Eunson/JEON Software (http://jeon.com.au)</string>
+			<key>Title</key>
+			<string>About this App</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<string>1.0 (87)</string>
+			<key>Key</key>
+			<string>version</string>
+			<key>Title</key>
+			<string>Version</string>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>Acknowledgements.html</string>
+			<key>IASKViewControllerClass</key>
+			<string>AcknowledgementsViewController</string>
+			<key>IASKViewControllerSelector</key>
+			<string>initWithFile:key:</string>
+			<key>Title</key>
+			<string>Acknowledgements</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>Disclaimer.html</string>
+			<key>IASKViewControllerClass</key>
+			<string>DisclaimerViewController</string>
+			<key>IASKViewControllerSelector</key>
+			<string>initWithFile:key:</string>
+			<key>Title</key>
+			<string>Disclaimer</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+	</array>
+	<key>StringsTable</key>
+	<string>Root</string>
+</dict>
+</plist>
