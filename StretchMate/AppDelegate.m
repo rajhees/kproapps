@@ -25,9 +25,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
 //    NSLog(@"%@", [[NSBundle mainBundle] resourcePath]);
-    [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:kExerciseThreeTimesCompletedKey];
-    [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:kExerciseThreeTimesEncourageKey];
-    
+
     if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
         
         // Orange bar style
