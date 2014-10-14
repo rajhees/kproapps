@@ -36,6 +36,15 @@
 
 #define kProgramAlarmsEnabled @"programAlarmsEnabled"
 
+
+// Store Key about the information of message alert (when user use the exercise 3 times, then show encourage message)
+
+#define kExerciseThreeTimesEncourageKey @"exerciseThreetimesEncourage"
+#define kExerciseThreeTimesCompletedKey @"exerciseThreetimesCompleted"
+
+#define kExerciseTimeRecorded @"exerciseTimeRecorded"
+
+
 @interface AppConfig : NSObject
 
 @property (nonatomic, strong) NSMutableDictionary * configDict;

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0192C7B619E5310E005405EA /* HealthKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0192C7B519E5310E005405EA /* HealthKitManager.m */; };
+		01D324FB19E5699D000E0388 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D324FA19E5699D000E0388 /* HealthKit.framework */; };
 		9805296F17C46CEE00914524 /* ProgramListingHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9805296E17C46CEE00914524 /* ProgramListingHeaderView.m */; };
 		9807DF491665D09C00D3B590 /* navigation-bar-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9807DF471665D09C00D3B590 /* navigation-bar-bg.png */; };
 		9807DF4A1665D09C00D3B590 /* navigation-bar-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9807DF481665D09C00D3B590 /* navigation-bar-bg@2x.png */; };
@@ -1587,6 +1589,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		017FD54919E7868800690301 /* Exersite.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Exersite.entitlements; path = Exersite/Exersite.entitlements; sourceTree = "<group>"; };
+		0192C7B419E5310E005405EA /* HealthKitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthKitManager.h; sourceTree = "<group>"; };
+		0192C7B519E5310E005405EA /* HealthKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthKitManager.m; sourceTree = "<group>"; };
+		01D324FA19E5699D000E0388 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		040158B6B6874D4DB6A76A56 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B2FEBF0C09F424795FB251F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		9805296D17C46CEE00914524 /* ProgramListingHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramListingHeaderView.h; sourceTree = "<group>"; };
@@ -3332,6 +3338,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01D324FB19E5699D000E0388 /* HealthKit.framework in Frameworks */,
 				9812889D16327C070076388E /* UIKit.framework in Frameworks */,
 				98ABEF7C18111FEE00DD87B5 /* CFNetwork.framework in Frameworks */,
 				9812889F16327C070076388E /* Foundation.framework in Frameworks */,
@@ -3360,6 +3367,7 @@
 		9812888D16327C070076388E = {
 			isa = PBXGroup;
 			children = (
+				017FD54919E7868800690301 /* Exersite.entitlements */,
 				98FC849618558908005E99FF /* Images.xcassets */,
 				98B91617163A0E0C00B945DB /* Entitlements.entitlements */,
 				981289001632ABD60076388E /* StretchMate.xcdatamodeld */,
@@ -3384,6 +3392,7 @@
 		9812889B16327C070076388E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01D324FA19E5699D000E0388 /* HealthKit.framework */,
 				980C6C3C1831F4B40078AE1A /* Reveal.framework */,
 				98ABEF7D18111FF500DD87B5 /* QuartzCore.framework */,
 				98ABEF7B18111FEE00DD87B5 /* CFNetwork.framework */,
@@ -5511,6 +5520,8 @@
 				98D0FE7D177AD723003CEB06 /* ExersiteHTTPClient.h */,
 				98D0FE7E177AD723003CEB06 /* ExersiteHTTPClient.m */,
 				98D0FE80177AD93A003CEB06 /* ExersiteAPI.h */,
+				0192C7B419E5310E005405EA /* HealthKitManager.h */,
+				0192C7B519E5310E005405EA /* HealthKitManager.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -5580,7 +5591,7 @@
 			name = ExersiteTests;
 			productName = StretchMateTests;
 			productReference = 981288CD16327C080076388E /* ExersiteTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -5593,6 +5604,11 @@
 				TargetAttributes = {
 					9812889716327C070076388E = {
 						DevelopmentTeam = GJPK7W5MXT;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -7127,6 +7143,7 @@
 				9876EF9316CA1F9300199482 /* Program.m in Sources */,
 				986B3D2E16CB698B00E73AC8 /* ProgramsViewController.m in Sources */,
 				98572A6D183B2E040080CE7E /* ShopConfirmOrderViewController.m in Sources */,
+				0192C7B619E5310E005405EA /* HealthKitManager.m in Sources */,
 				980C11B816CF349000F92CBA /* ExerciseEquipmentCell.m in Sources */,
 				980C11BB16CF34F200F92CBA /* ExerciseEquipmentFlowLayout.m in Sources */,
 				983097AE182A326D0075D2F3 /* ShopRequestQuoteScrollView.m in Sources */,
@@ -7335,7 +7352,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = Exersite/Exersite.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Geetha Soosay (6S99AD94P8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Geetha Soosay (6S99AD94P8)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -7345,12 +7362,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StretchMate/Exersite-Prefix.pch";
 				INFOPLIST_FILE = "StretchMate/Exersite-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Exersite;
-				PROVISIONING_PROFILE = "D5FB30EC-FD17-498A-9E3D-EC99264678DF";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D5FB30EC-FD17-498A-9E3D-EC99264678DF";
+				PROVISIONING_PROFILE = "2722d3ee-09f5-466a-a744-0f01f8ad0369";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2722d3ee-09f5-466a-a744-0f01f8ad0369";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -7361,7 +7379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = Exersite/Exersite.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Geetha Soosay (6S99AD94P8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Geetha Soosay (6S99AD94P8)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -7371,12 +7389,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StretchMate/Exersite-Prefix.pch";
 				INFOPLIST_FILE = "StretchMate/Exersite-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = Exersite;
-				PROVISIONING_PROFILE = "D5FB30EC-FD17-498A-9E3D-EC99264678DF";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D5FB30EC-FD17-498A-9E3D-EC99264678DF";
+				PROVISIONING_PROFILE = "2722d3ee-09f5-466a-a744-0f01f8ad0369";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2722d3ee-09f5-466a-a744-0f01f8ad0369";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

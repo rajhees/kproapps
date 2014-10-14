@@ -4,7 +4,5 @@
 <dict>
 	<key>com.apple.developer.healthkit</key>
 	<true/>
-	<key>get-task-allow</key>
-	<false/>
 </dict>
 </plist>

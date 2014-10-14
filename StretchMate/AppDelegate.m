@@ -14,6 +14,8 @@
 #import "ExercisesViewController.h"
 #import "ExersiteSession.h"
 
+// test
+#import "HealthKitManager.h"
 #define kTestFlightTestAPIKey @"0c0335e8-0790-4f2f-9fa5-b917aa5a963e"
 #define kTestFlightProductionAPIKey @""
 #define kBugsenseAPIKey @"2fee2632"
@@ -23,7 +25,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
 //    NSLog(@"%@", [[NSBundle mainBundle] resourcePath]);
-
+    [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:kExerciseThreeTimesCompletedKey];
+    [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:kExerciseThreeTimesEncourageKey];
+    
     if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
         
         // Orange bar style

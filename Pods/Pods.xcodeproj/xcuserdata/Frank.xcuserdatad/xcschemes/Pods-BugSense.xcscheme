@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FA0443AADFEB49FCBE38BF2D"
+               BlueprintIdentifier = "CA141E4F2F0940BDB13A248F"
                BuildableName = "libPods-BugSense.a"
                BlueprintName = "Pods-BugSense"
                ReferencedContainer = "container:Pods.xcodeproj">

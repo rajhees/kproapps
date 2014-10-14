@@ -51,6 +51,8 @@ typedef enum {
 @property (nonatomic, assign) NSInteger totalSeconds;
 @property (nonatomic, assign, getter = isPaused) BOOL paused;
 
+@property (nonatomic, strong) NSNumber* recordedTime;
+
 - (void)toggleTimerWithStartStopButton:(ExerciseNowCompletingStartPauseButton*)button;
 - (void)updateInterfaceAfterPageChange;
 - (void)resetFinishedButton;

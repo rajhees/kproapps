@@ -159,6 +159,13 @@ OBJC_EXPORT @interface BugSenseController : NSObject <UIAlertViewDelegate>
  */
 + (void) setFixNotificationsTitle:(NSString *)title message:(NSString *)message;
 
+/**
+ Sets a string for identifying the user.
+ 
+ @param identifier the string identifying the user.
+ */
++ (void)setUserIdentifier:(NSString *)identifier;
+
 /** @name Logging exceptions */
 
 /**
@@ -202,7 +209,37 @@ OBJC_EXPORT @interface BugSenseController : NSObject <UIAlertViewDelegate>
 
 + (NSString *)apiKey;
 + (NSString *)endpointURL;
++ (NSString *)userIdentifier;
 
 + (BOOL) usesProxy;
+
+/** @name Crash on Last Run functions */
+
+/**
+ Returns the id of the last crash that was sent to the BugSense servers.
+ 
+ @return A long integer identifying the crash.
+  
+ */
++ (long)lastCrashId;
+
+/**
+ Returns the number of crashes that the user has experienced since the last reset.
+ 
+ @return The number of crashes.
+ 
+ */
++ (int)crashCount;
+
+/**
+ Resets the number of crashes that the user has experienced to zero.
+  
+ @return A boolean indicating whether the number of crashes was successfully reset to zero.
+ 
+ */
++ (BOOL)resetCrashCount;
+
+typedef void (^ OperationsCompletionBlock)();
++ (void)setErrorNetworkOperationsCompletionBlock:(OperationsCompletionBlock)block;
 
 @end

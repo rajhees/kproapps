@@ -88,6 +88,8 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_scrollView]|" options:0 metrics:nil views:bindings]];
 }
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -249,7 +251,8 @@
     
     ExercisesListingViewController *viewController = (ExercisesListingViewController*)[[UIStoryboard storyboardWithName:@"MainStoryboard_iPhone"
                                                                                                                  bundle:NULL] instantiateViewControllerWithIdentifier:@"ExercisesListingViewController"];
-    viewController.currentType = [[[self.selectedExercise types] allObjects] firstObject];
+    Exercise *exerc = (Exercise*)self.selectedExercise;
+    viewController.currentType = [[[exerc types] allObjects] firstObject];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

@@ -19,7 +19,7 @@ typedef enum {
 } ExerciseNowCompletingViewControllerMode;
 
 @protocol ExerciseNowCompletingPageDelegate;
-@interface ExerciseNowCompletingViewController : UIViewController <UIScrollViewDelegate, UIGestureRecognizerDelegate, ExerciseNowCompletingViewDelegate, ExerciseNowCompletingToolbarDelegate>
+@interface ExerciseNowCompletingViewController : UIViewController <UIScrollViewDelegate, UIGestureRecognizerDelegate, ExerciseNowCompletingViewDelegate, ExerciseNowCompletingToolbarDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) id selectedExercise;
 

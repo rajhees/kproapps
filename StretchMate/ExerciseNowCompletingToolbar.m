@@ -11,6 +11,9 @@
 #import "ProgressHUDHelper.h"
 
 @interface ExerciseNowCompletingToolbar ()
+{
+    int _privateRecordedTime;
+}
 
 - (void)didTapPreviousButton:(id)sender;
 - (void)didTapNextButton:(id)sender;
@@ -24,11 +27,14 @@
 
 @end
 
+
 @implementation ExerciseNowCompletingToolbar
 
 - (id)init {
     self = [super init];
     if(self) {
+        
+        _privateRecordedTime = 0;
         
         self.translucent = YES;
         self.barTintColor = RGBCOLOR(238, 238, 238);
@@ -116,6 +122,10 @@
         
         self.remainingSeconds--;
     }
+    
+    // Save Recorded Time.
+    _privateRecordedTime++;
+    self.recordedTime = @(_privateRecordedTime);
     
     [self updateTimerInternal];
 }
@@ -286,6 +296,9 @@
 - (void)didTapStartPauseButton:(id)sender {
     [self toggleTimerWithStartStopButton:sender];
     
+    // Save Recorded Time.
+    
+    
     if([self.nowCompletingToolbarDelegate respondsToSelector:@selector(exerciseNowCompletingToolbar:didTapStartPauseButton:)]) {
         [self.nowCompletingToolbarDelegate performSelector:@selector(exerciseNowCompletingToolbar:didTapStartPauseButton:) withObject:self withObject:sender];
     }
@@ -295,11 +308,15 @@
 //    NSLog(@"didTapFinishedButton:");
     
 //    [self toggleTimerWithStartStopButton:sender];
+    
+    NSLog(@"Time Recorded = %d", _privateRecordedTime);
+    
     [self resetTimerState];
     
     if([self.nowCompletingToolbarDelegate respondsToSelector:@selector(exerciseNowCompletingToolbar:didTapFinishedButton:)]) {
         [self.nowCompletingToolbarDelegate performSelector:@selector(exerciseNowCompletingToolbar:didTapFinishedButton:) withObject:self withObject:sender];
     }
 }
+
 
 @end

@@ -17,7 +17,15 @@
 #import "ExerciseNowCompletingStartPauseButton.h"
 #import "ProgressHUDHelper.h"
 
+// HealthKit
+#import "HealthKitManager.h"
+
 #define kExerciseImagesScrollViewHeight 175.0f
+
+#define kEncourageMessageFirst          @"Well begun is half done."
+#define kEncourageMessageSecond         @"Fortune favors the brave."
+#define kEncourageMessageThird          @"Reach perfection."
+#define kEncourageMessageCompleteThird  @"Excellent effort you completed 3 exercises"
 
 @implementation ExerciseNowCompletingViewController
 
@@ -27,6 +35,52 @@
         self.mode = mode;
     }
     return self;
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+//    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+//    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+//    
+    NSInteger numberOfExercises = [[NSUserDefaults standardUserDefaults] integerForKey:kExerciseThreeTimesEncourageKey];
+    NSLog(@"Exercise View Opened : = %ld", numberOfExercises);
+    
+    if (numberOfExercises <= 3) {
+        numberOfExercises = numberOfExercises + 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:numberOfExercises forKey:kExerciseThreeTimesEncourageKey];
+        
+        if (numberOfExercises > 3) {
+            return;
+        }
+        
+        NSString *strMessage;
+        switch (numberOfExercises) {
+            case 1:
+                strMessage = kEncourageMessageFirst;
+                break;
+            case 2:
+                strMessage = kEncourageMessageSecond;
+                break;
+            case 3:
+                strMessage = kEncourageMessageThird;
+                break;
+                
+            default:
+                break;
+        }
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Congratulations!" message:strMessage delegate:self cancelButtonTitle:@"Go on" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+    
+    
+    
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    
 }
 
 - (void)loadView {
@@ -158,6 +212,8 @@
 #pragma mark - ExerciseNowCompletingToolbarDelegate Methods
 - (void)exerciseNowCompletingToolbar:(ExerciseNowCompletingToolbar*)toolbar didTapStartPauseButton:(UIButton*)startPauseButton {
     
+    // start button click
+    
     if(self.nowCompletingView.startFinishHintToolbar) {
         
         if(![[AppConfig sharedConfig] exerciseNowCompletingStartFinishTipActionPerformed]) {
@@ -175,7 +231,31 @@
 }
 
 - (void)exerciseNowCompletingToolbar:(ExerciseNowCompletingToolbar*)toolbar didTapFinishedButton:(UIButton*)finishedButton {
+    // I'm Finished button click
+    NSInteger numberOfExercCompleted = [[NSUserDefaults standardUserDefaults] integerForKey:kExerciseThreeTimesCompletedKey];
+    NSLog(@"Exercise Completed : =%ld", (long)numberOfExercCompleted);
+    
+    if (numberOfExercCompleted <= 3) {
+        numberOfExercCompleted = numberOfExercCompleted + 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:numberOfExercCompleted forKey:kExerciseThreeTimesCompletedKey];
+        
+    }
+    if (numberOfExercCompleted == 3) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Congratulations!" message:kEncourageMessageCompleteThird delegate:self cancelButtonTitle:@"Go on" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void) viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    if (self.nowCompletingToolbar) {
+        NSNumber *timeRecorded = self.nowCompletingToolbar.recordedTime;
+        NSLog(@"Time Recorded in ViewController = %ld", [timeRecorded integerValue]);
+        [HealthKitManager saveTimeToHealthKitStore:[timeRecorded intValue]];
+        
+    }
+}
 @end
