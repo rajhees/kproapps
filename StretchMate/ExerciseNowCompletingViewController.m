@@ -23,7 +23,7 @@
 #define kExerciseImagesScrollViewHeight 175.0f
 
 #define kEncourageMessageFirst          @"Well begun is half done."
-#define kEncourageMessageSecond         @"Fortune favors the brave."
+#define kEncourageMessageSecond         @"Fortune favours the brave."
 #define kEncourageMessageThird          @"Reach perfection."
 #define kEncourageMessageCompleteThird  @"Excellent effort you completed 3 exercises"
 

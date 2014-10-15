@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="5053" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="dvT-xM-ZKT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="dvT-xM-ZKT">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
+        <deployment defaultVersion="2048" identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Login More Information View Controller-->
@@ -41,7 +41,7 @@
             </objects>
             <point key="canvasLocation" x="-625" y="-705"/>
         </scene>
-        <!--Navigation Controller - Programs-->
+        <!--Programs-->
         <scene sceneID="K3g-PY-lPO">
             <objects>
                 <navigationController definesPresentationContext="YES" id="DU4-on-GDV" sceneMemberID="viewController">
@@ -57,7 +57,7 @@
             </objects>
             <point key="canvasLocation" x="591" y="-109"/>
         </scene>
-        <!--Programs View Controller - Programs-->
+        <!--Programs-->
         <scene sceneID="R6v-VT-YGP">
             <objects>
                 <viewController storyboardIdentifier="ProgramsViewController" id="3Wk-p1-bIz" customClass="ProgramsViewController" sceneMemberID="viewController">
@@ -75,7 +75,7 @@
             </objects>
             <point key="canvasLocation" x="1009" y="-109"/>
         </scene>
-        <!--Program Listing View Controller - Program Listing-->
+        <!--Program Listing-->
         <scene sceneID="Qrs-lV-G2W">
             <objects>
                 <viewController storyboardIdentifier="ProgramListingViewController" id="dEC-QT-4Dy" customClass="ProgramListingViewController" sceneMemberID="viewController">
@@ -117,13 +117,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Y6-LO-paT">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" useAutomaticPreferredMaxLayoutWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Y6-LO-paT">
                                             <rect key="frame" x="53" y="2" width="36" height="22"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJB-t9-YHz">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" useAutomaticPreferredMaxLayoutWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rJB-t9-YHz">
                                             <rect key="frame" x="53" y="24" width="50" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
@@ -345,7 +345,7 @@
             </objects>
             <point key="canvasLocation" x="-625" y="-1940"/>
         </scene>
-        <!--Navigation Controller - Notifications-->
+        <!--Notifications-->
         <scene sceneID="ayt-Hk-8gO">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Ana-zz-nGV" sceneMemberID="viewController">
@@ -361,7 +361,7 @@
             </objects>
             <point key="canvasLocation" x="-336" y="3289"/>
         </scene>
-        <!--Shop View Controller - Shop-->
+        <!--Shop-->
         <scene sceneID="rFl-GZ-BCp">
             <objects>
                 <viewController storyboardIdentifier="ShopViewController" id="nnI-p4-UfR" customClass="ShopViewController" sceneMemberID="viewController">
@@ -471,7 +471,7 @@
             </objects>
             <point key="canvasLocation" x="955" y="4509"/>
         </scene>
-        <!--Shop Detail View Controller - Shop Item-->
+        <!--Shop Item-->
         <scene sceneID="glk-uo-mRI">
             <objects>
                 <viewController id="Xzk-uZ-TpN" customClass="ShopDetailViewController" sceneMemberID="viewController">
@@ -673,7 +673,7 @@
             </objects>
             <point key="canvasLocation" x="-1514" y="4037"/>
         </scene>
-        <!--Navigation Controller - Prescription-->
+        <!--Prescription-->
         <scene sceneID="fot-su-Ccq">
             <objects>
                 <navigationController definesPresentationContext="YES" id="L8c-KZ-EcR" sceneMemberID="viewController">
@@ -689,7 +689,7 @@
             </objects>
             <point key="canvasLocation" x="591" y="1241"/>
         </scene>
-        <!--Navigation Controller - Exercises-->
+        <!--Exercises-->
         <scene sceneID="VrW-B1-3ud">
             <objects>
                 <navigationController definesPresentationContext="YES" id="srd-IX-7Lx" sceneMemberID="viewController">
@@ -710,7 +710,7 @@
             </objects>
             <point key="canvasLocation" x="591" y="562"/>
         </scene>
-        <!--Exercises View Controller - Exercises-->
+        <!--Exercises-->
         <scene sceneID="sYJ-MX-eGR">
             <objects>
                 <viewController id="dmu-p6-CE7" customClass="ExercisesViewController" sceneMemberID="viewController">
@@ -739,7 +739,7 @@
             </objects>
             <point key="canvasLocation" x="1009" y="562"/>
         </scene>
-        <!--Prescription View Controller - Prescription-->
+        <!--Prescription-->
         <scene sceneID="Pcn-eC-J6s">
             <objects>
                 <viewController storyboardIdentifier="PrescriptionViewController" id="QcV-O8-n29" customClass="PrescriptionViewController" sceneMemberID="viewController">
